@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <form id="formularioProveedor">
+            <h1>Crear Proveedor</h1>
+            <div class="input-container">
+                <input type="text" name="nitProveedor" id="nitProveedor" placeholder="Nit Proveedor" onkeypress="return valideKey(event);">
+                <label for="nitProveedor">Nit</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="nombreProveedor" id="nombreProveedor" placeholder="nombre Proveedor">
+                <label for="nombreProveedor">Nombre</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="correoProveedor" id="correoProveedor" placeholder="Email Proveedor">
+                <label for="correoProveedor">Email</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="telefonoProveedor" id="telefonoProveedor" placeholder="Teléfono Proveedor" onkeypress="return valideKey(event);">
+                <label for="telefonoProveedor">Teléfono</label>
+            </div>
+            <select name="categoriaProveedor" id="categoriaProveedor">
+                <option>Categoría</option>
+                <option value="1">Tostado</option>
+                <option value="2">Orgánico</option>
+            </select>
+            <select name="estadoProveedor" id="estadoProveedor">
+                <option>Estado</option>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+            <button>crear producto</button>
+            <p id="error"></p>
+        </form>
+    </div>
+    <div id="modalContainer" class="hide">
+        <div class="modal">
+            <span class="close" id="closeModalButton" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <i class="fa-solid fa-check check"></i>
+            <h1>Proveedor creado con exito</h1>
+            <button onclick="closeModal()">Aceptar</button>
+        </div>
+    </div>
+    <script src="/js/validacionNumeros.js"></script>
+    <script src="/js/validacionFormularios.js"></script>
+</body>
+</html>

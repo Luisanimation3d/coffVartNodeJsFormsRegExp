@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <h1>Usuarios</h1>
+        <table>
+            <a href="/admin/users/create" class="boton-crear">Nuevo</a>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>correo</th>
+                    <th>estado</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>luiscorrea@example.com</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>santiago.a@example.com</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>mateo.osorio@example.com</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>a.velas@example.com</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

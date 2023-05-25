@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <h1>Productos</h1>
+        <table>
+            <a href="/admin/products/create" class="boton-crear">Nuevo</a>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>descripción</th>
+                    <th>categoría</th>
+                    <th>stock</th>
+                    <th>stock min</th>
+                    <th>valor unit.</th>
+                    <th>estado</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10001</td>
+                    <td>Café Molido Clásico</td>
+                    <td>Café de origen colombiano, molido para preparar</td>
+                    <td>Café</td>
+                    <td>150</td>
+                    <td>20</td>
+                    <td>$8.900</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td>10002</td>
+                    <td>Café Mezcla Premium</td>
+                    <td>Mezcla de granos de café premium para preparar</td>
+                    <td>Café</td>
+                    <td>200</td>
+                    <td>50</td>
+                    <td>$12.900</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

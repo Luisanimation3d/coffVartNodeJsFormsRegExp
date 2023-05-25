@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <h1>Proveedores</h1>
+        <table>
+            <a href="/admin/providers/create" class="boton-crear">Nuevo</a>
+            <thead>
+                <tr>
+                   <th>id</th>
+                   <th>nit</th>
+                   <th>nombre</th>
+                   <th>correo</th>
+                   <th>telefono</th>
+                   <th>categoría</th>
+                   <th>estado</th>
+                   <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>100011234</td>
+                    <td>Café Supplier S.A.</td>
+                    <td>info@cafesupplier.com</td>
+                    <td>52551234567</td>
+                    <td>Mayorista</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>100025678</td>
+                    <td>Provecafé Internacional</td>
+                    <td>ventas@provecafe.com</td>
+                    <td>5719876543</td>
+                    <td>Exportador</td>
+                    <td>Activo</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <form id="formularioUsuario">
+            <h1>Crear Usuario</h1>
+            <div class="input-container">
+                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre usuario">
+                <label for="nombreUsuario">Nombre</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="telefonoUsuario" id="telefonoUsuario" placeholder="Telefonousuario" onkeypress="return valideKey(event);">
+                <label for="telefonoUsuario">Teléfono</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="emailUsuario" id="emailUsuario" placeholder="Email usuario">
+                <label for="emailUsuario">Email</label>
+            </div>
+            <div class="input-container">
+                <input type="password" name="passwordUsuario" id="passwordUsuario" placeholder="Contraseña usuario">
+                <label for="passwordUsuario">Contraseña</label>
+            </div>
+            <div class="input-container">
+                <input type="password" name="confirmarContrasenaUsuario" id="confirmarContrasenaUsuario" placeholder="Confirmar Contraseña usuario">
+                <label for="confirmarContrasenaUsuario">Confirmar Contraseña</label>
+            </div>
+            <select name="rolUsuario" id="rolUsuario">
+                <option>Rol</option>
+                <option value="activo">Administrador</option>
+                <option value="inactivo">Cliente</option>
+            </select>
+            <button>crear usuario</button>
+            <p id="error"></p>
+        </form>
+    </div>
+    <div id="modalContainer" class="hide">
+        <div class="modal">
+            <span class="close" id="closeModalButton" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <i class="fa-solid fa-check check"></i>
+            <h1>usuario creado con exito</h1>
+            <button onclick="closeModal()">Aceptar</button>
+        </div>
+    </div>
+    <script src="/js/validacionNumeros.js"></script>
+    <script src="/js/validacionFormularios.js"></script>
+</body>
+</html>

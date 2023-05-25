@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto | Admin | Burdeos</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{> menu}}
+    <div class="container">
+        <form id="formularioProducto">
+            <h1>Crear Producto</h1>
+            <div class="input-container">
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre producto">
+                <label for="nombreProducto">Nombre del Producto</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="descripcionProducto" id="descripcionProducto" placeholder="Descripcion producto">
+                <label for="descripcionProducto">Descripción del Producto</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="stockProducto" id="stockProducto" placeholder="Stock del producto" onkeypress="return valideKey(event);">
+                <label for="stockProducto">Stock del Producto</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="nstockMinProducto" id="nstockMinProducto" placeholder="Stock Mínimo del Producto" onkeypress="return valideKey(event);">
+                <label for="nstockMinProducto">Stock Mínimo del Producto</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="valorProducto" id="valorProducto" placeholder="Valor del producto" onkeypress="return valideKey(event);">
+                <label for="valorProducto">Valor del Producto</label>
+            </div>
+            <select name="categoriaProducto" id="categoriaProducto">
+                <option>Categoría</option>
+                <option value="1">Tostado</option>
+                <option value="2">Orgánico</option>
+            </select>
+            <select name="estadoProducto" id="estadoProducto">
+                <option>Estado</option>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+            <button>crear producto</button>
+            <p id="error"></p>
+        </form>
+    </div>
+    <div id="modalContainer" class="hide">
+        <div class="modal">
+            <span class="close" id="closeModalButton" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <i class="fa-solid fa-check check"></i>
+            <h1>Producto creado con exito</h1>
+            <button onclick="closeModal()">Aceptar</button>
+        </div>
+    </div>
+    <script src="/js/validacionNumeros.js"></script>
+    <script src="/js/validacionFormularios.js"></script>
+</body>
+</html>
