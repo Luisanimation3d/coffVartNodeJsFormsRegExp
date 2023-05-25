@@ -29,7 +29,7 @@ formulario.addEventListener('submit', (e) => {
 		if (!passWordExpReg.test(password)) {
 			throw new Error('La contraseña no es válida');
 		}
-		window.location.href = 'http://localhost:3000/admin';
+		window.location.href = '/admin';
 	} catch (error) {
 		document.getElementById('error').innerHTML = error.message;
 	}

@@ -8,7 +8,7 @@ const modalContainer = document.getElementById('modalContainer');
 
 function closeModal() {
 	modalContainer.classList.add('hide');
-	window.location.href = 'http://localhost:3000/admin';
+	window.location.href = '/admin';
 }
 
 formularioProducto?.addEventListener('submit', (e) => {
